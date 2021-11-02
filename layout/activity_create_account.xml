@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateAccountActivity"
+    android:orientation="horizontal" >
+    <LinearLayout
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="#FF135C0A"
+        android:layout_marginLeft="30dp"
+        android:layout_gravity="right"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:background="#E1F1D8">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:text="Create a New Account"
+            android:textSize="22sp"
+            android:textColor="#135C0A"
+            />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/confemail"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:hint="Confirm Email"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/pw"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            />
+        <EditText
+            android:id="@+id/confpw"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/charmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:text="min. 8 characters"
+            android:layout_marginTop="4dp"/>
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:onClick="submit"
+            android:backgroundTint="#FF135C0A"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="#FF135C0A"
+        android:layout_marginRight="30dp"
+        android:layout_gravity="left"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

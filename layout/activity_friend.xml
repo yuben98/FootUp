@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    layout_width=""
+    layout_height=""
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FriendActivity"
+    android:background="#E1F1D8">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Friends List"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:background="#FF135C0A"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/friendEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Type a friend's email address"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="2"
+            android:inputType="textEmailAddress"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2CD118"
+            android:text="Add Friend"
+            android:onClick="addFriend"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/mylist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="5dp"
+        />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

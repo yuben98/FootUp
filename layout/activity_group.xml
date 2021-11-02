@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    layout_width=""
+    layout_height=""
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GroupActivity"
+    android:background="#E1F1D8">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Groups List"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:background="#FF135C0A"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <EditText
+            android:id="@+id/grpCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Invite Code"
+            android:textSize="20sp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2CD118"
+                android:text="Join Group"
+                android:onClick="joinGroup"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2CD118"
+                android:text="Create Group"
+                android:onClick="createGroup"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/mylist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

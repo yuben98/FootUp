@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GroupPageActivity" >
+    <LinearLayout
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="#FF135C0A"
+        android:layout_marginLeft="30dp"
+        android:layout_gravity="right"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:background="#E1F1D8"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="2dp"
+                android:gravity="center"
+                android:text="name"
+                android:textColor="#135C0A"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/invcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="invite code"
+                android:layout_marginBottom="6dp"
+                android:clickable="true"
+                android:onClick="cpy"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/grpimg"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:onClick="changePic"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Owner:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/owner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Games Played:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/gamesPlayed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Members:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/numMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Next Game:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:id="@+id/gameInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+        <Button
+            android:id="@+id/regBtn"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF135C0A"
+            android:text="Register for game"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:onClick="register"
+            android:visibility="gone"
+            />
+        <Button
+            android:id="@+id/memButton"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF135C0A"
+            android:text="Group Members"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:onClick="listMembers"
+            />
+        <Button
+            android:id="@+id/addGame"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF135C0A"
+            android:text="Add a Game"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:onClick="addGame"
+            android:visibility="gone"
+            />
+        <Button
+            android:id="@+id/invFriend"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF135C0A"
+            android:text="Add a Friend"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:onClick="inviteFriend"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="#FF135C0A"
+        android:layout_marginRight="30dp"
+        android:layout_gravity="left"
+        />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

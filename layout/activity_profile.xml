@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity" >
+    <LinearLayout
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="#FF135C0A"
+        android:layout_marginLeft="30dp"
+        android:layout_gravity="right"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:background="#E1F1D8"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="profile"
+                android:textColor="#135C0A"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                />
+            <Button
+                android:id="@+id/edBtn"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:text="Edit Profile"
+                android:layout_gravity="center"
+                android:textSize="10sp"
+                android:backgroundTint="#2CD118"
+                android:onClick="edit"
+                />
+            <Button
+                android:id="@+id/removeBtn"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:text="Remove picture"
+                android:layout_gravity="center"
+                android:textSize="10sp"
+                android:backgroundTint="#B81010"
+                android:onClick="remove_pic"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/profimg"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:onClick="change_pic"/>
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="tap profile pic to change"
+            android:visibility="gone"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Display Name:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:inputType="text"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Email:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edit_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#2C2C2C"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Games Played:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/gamesPlayed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:inputType="textEmailAddress"
+                android:enabled="false"
+                android:textColorHint="#2C2C2C"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Groups Joined:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/numGroups"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:inputType="textEmailAddress"
+                android:enabled="false"
+                android:textColorHint="#2C2C2C"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Friends Added:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/numFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:inputType="textEmailAddress"
+                android:enabled="false"
+                android:textColorHint="#2C2C2C"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Change Password:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edit_pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:inputType="textPassword"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/confpw_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Confirm pw:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/conf_pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:inputType="textPassword"/>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/svBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Changes"
+            android:layout_gravity="center"
+            android:backgroundTint="#2CD118"
+            android:layout_marginTop="20dp"
+            android:onClick="save_changes"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="#FF135C0A"
+        android:layout_marginRight="30dp"
+        android:layout_gravity="left"
+        />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
