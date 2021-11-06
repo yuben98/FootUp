@@ -105,7 +105,7 @@ public class ProfileActivity extends AppCompatActivity {
         ufilename = id +".png";
         ppic.setClickable(false);
 
-        ppicsRef.child(ufilename).getBytes(1024*1024)
+        ppicsRef.child(ufilename).getBytes(5*(1024*1024))
                 .addOnSuccessListener(new OnSuccessListener<byte[]>() {
                     @Override
                     public void onSuccess(byte[] bytes) {
