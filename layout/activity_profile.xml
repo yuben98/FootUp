@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,18 +13,23 @@
         android:layout_marginLeft="30dp"
         android:layout_gravity="right"/>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_weight="2"
         android:background="#E1F1D8"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
         <LinearLayout
+            android:id="@+id/proflay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             >
             <TextView
                 android:id="@+id/profile"
@@ -39,7 +45,7 @@
                 android:id="@+id/edBtn"
                 android:layout_width="120dp"
                 android:layout_height="30dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="6dp"
                 android:text="Edit Profile"
                 android:layout_gravity="center"
                 android:textSize="10sp"
@@ -50,7 +56,7 @@
                 android:id="@+id/removeBtn"
                 android:layout_width="120dp"
                 android:layout_height="30dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="6dp"
                 android:text="Remove picture"
                 android:layout_gravity="center"
                 android:textSize="10sp"
@@ -67,7 +73,10 @@
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_marginTop="2dp"
-            android:onClick="change_pic"/>
+            android:onClick="change_pic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/proflay" />
         <TextView
             android:id="@+id/tip"
             android:layout_width="match_parent"
@@ -77,13 +86,21 @@
             android:visibility="gone"
             android:textSize="12sp"
             android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/profimg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             />
 
         <LinearLayout
+            android:id="@+id/nameLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tip"
+            >
 
             <TextView
                 android:layout_width="wrap_content"
@@ -107,10 +124,14 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/emailLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameLayout">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -133,10 +154,14 @@
                 android:textColorHint="#2C2C2C"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/gamesLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailLayout">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -160,10 +185,14 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/groupsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gamesLayout">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -187,10 +216,14 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/friendLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/groupsLayout">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -214,10 +247,14 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/pwLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/friendLayout">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -245,7 +282,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
-            android:visibility="gone">
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pwLayout">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -267,26 +307,25 @@
                 android:inputType="textPassword"/>
 
         </LinearLayout>
+
         <Button
             android:id="@+id/svBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Save Changes"
             android:layout_gravity="center"
-            android:backgroundTint="#2CD118"
             android:layout_marginTop="20dp"
+            android:backgroundTint="#2CD118"
             android:onClick="save_changes"
+            android:text="Save Changes"
             android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confpw_layout"
             />
-        <TextView
-            android:id="@+id/status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:layout_gravity="center"
-            android:layout_marginTop="6dp"
-            />
-    </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout
         android:layout_width="4dp"
         android:layout_height="match_parent"

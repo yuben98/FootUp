@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,20 +13,24 @@
         android:layout_marginLeft="30dp"
         android:layout_gravity="right"/>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_weight="2"
         android:background="#E1F1D8"
         android:orientation="vertical">
+
         <LinearLayout
+            android:id="@+id/linearLayout5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:gravity="center"
             android:orientation="vertical"
-            >
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
             <TextView
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
@@ -37,15 +42,15 @@
                 android:textColor="#135C0A"
                 android:textSize="30sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/invcode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="invite code"
                 android:layout_marginBottom="6dp"
                 android:clickable="true"
                 android:onClick="cpy"
-                />
+                android:text="invite code" />
         </LinearLayout>
 
         <ImageView
@@ -53,16 +58,22 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="8dp"
             android:onClick="changePic"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="16dp"
             android:orientation="horizontal"
-            android:layout_marginBottom="10dp">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/grpimg">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -78,18 +89,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="6dp"
                 android:layout_marginRight="6dp"
-                android:textSize="20sp"
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                />
+                android:textSize="20sp" />
         </LinearLayout>
+
         <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -112,11 +125,13 @@
                 />
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/linearLayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -140,11 +155,13 @@
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/linearLayout4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
-            android:layout_marginBottom="10dp" >
+            android:layout_marginBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -165,27 +182,33 @@
                 android:textColor="@color/black"
                 />
         </LinearLayout>
+
         <Button
             android:id="@+id/regBtn"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="#FF135C0A"
-            android:text="Register for game"
-            android:layout_marginTop="10dp"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#FF135C0A"
             android:onClick="register"
+            android:text="Register for game"
             android:visibility="gone"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
         <Button
             android:id="@+id/memButton"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="#FF135C0A"
-            android:text="Group Members"
-            android:layout_marginTop="10dp"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#FF135C0A"
             android:onClick="listMembers"
-            />
+            android:text="Group Members"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regBtn" />
         <Button
             android:id="@+id/addGame"
             android:layout_width="210dp"
@@ -196,18 +219,28 @@
             android:layout_gravity="center"
             android:onClick="addGame"
             android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/memButton"
             />
+
         <Button
             android:id="@+id/invFriend"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="#FF135C0A"
-            android:text="Add a Friend"
-            android:layout_marginTop="10dp"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#2CD118"
             android:onClick="inviteFriend"
-            />
-    </LinearLayout>
+            android:text="Add a Friend"
+            app:flow_verticalBias="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addGame"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout
         android:layout_width="4dp"
         android:layout_height="match_parent"
